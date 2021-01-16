@@ -4,7 +4,7 @@ const handleSubmit = (location, message1, message2) => {
   message1.textContent = 'Searching...'
   message2.textContent = ''
 
-  fetch(`http://localhost:3000/weather?address=${location}`)
+  fetch(`/weather?address=${location}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
